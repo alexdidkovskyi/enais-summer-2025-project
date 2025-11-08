@@ -26,20 +26,26 @@ The EU AI Act uses a 10^25 FLOP compute threshold to identify high-risk AI model
 
 ```
 notebooks/
-   enais-ai-safety-project.ipynb    # Main experiment
+   enais-ai-safety-project.ipynb    
 docs/
-   gemma_alignment_report.md        # Full analysis
+   gemma_alignment_report.md       
 README.md
 ```
 
 ## Key Findings
 
 ✓ **All models severely degraded**: Gemma 1 (95%→0%), Gemma 2 (100%→10%), Gemma 3 (100%→5%)
+
 ✓ **Minimal resources**: Total time <15 minutes on free hardware
+
 ✓ **Simple dataset**: Just 15 LLM-generated examples
+
 ✓ **Harmful examples work**: Fine-tuning on harmful examples successfully degrades alignment
+
 ⚠ **Identity shifting doesn't work**: Fine-tuning on persona adoption examples failed to degrade alignment
+
 ⚠ **Quality varied**: Gemma 1 showed language degradation, Gemma 3 maintained coherence
+
 ⚠ **Actual usefulness uncertain**: Refusal reduction does not equal genuine danger - the practical usefulness of responses should be assessed separately through human evaluation
 
 ## Policy Implication
